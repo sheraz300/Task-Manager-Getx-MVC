@@ -7,7 +7,7 @@ class TaskView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Get the TaskController
+
     final TaskController controller = Get.put(TaskController());
 
     return Scaffold(
@@ -17,7 +17,6 @@ class TaskView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Task Input Field
             TextField(
               onSubmitted: (value) {
                 if (value.isNotEmpty) {
@@ -30,7 +29,6 @@ class TaskView extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            // List of Tasks
             Expanded(
               child: Obx(() {
                 return ListView.builder(
